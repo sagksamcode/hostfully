@@ -123,5 +123,41 @@ Response: HTTP 200
     "status": "CANCELLED"
 }
 
+```
+
+## Update Booking
+```
+PUT http://localhost:8080/bookings/df6fe654-3c05-4cd8-b601-a175c58476ed
+Accept: application/json
+Content-Type: application/json
+
+{
+    "startDate": "2024-01-21",
+    "endDate": "2024-01-27",
+    "guest": {
+	"firstName": "Paulo",
+	"lastName": "Dutra"
+    }
+}
+
+Response: HTTP 200
+
+
+```
+## Rebook Booking
+
+```
+PATCH http://localhost:8080/bookings/413c6081-ce1e-4246-8bb0-943e2fc46493/reschedule
+Accept: application/json
+Content-Type: application/json
+
+Response: HTTP 200
+
+{
+    "id": "413c6081-ce1e-4246-8bb0-943e2fc46493",
+    "status": "SCHEDULED"
+}
+
+```
 
 ```
