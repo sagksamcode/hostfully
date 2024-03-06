@@ -160,4 +160,34 @@ Response: HTTP 200
 
 ```
 
+## Creating Block
+```
+POST http://localhost:8080/blocks
+Accept: application/json
+Content-Type: application/json
+
+Response: HTTP 201
+
+{
+   "startDate": "2024-01-21",
+    "endDate": "2025-01-31",
+    "reason": "House will be unavailable",
+    "propertyId": "07d0f70e-3701-4bbb-9a53-cae0ba2123ee"
+}
+
+```
+## Update Block
+```
+PUT http://localhost:8080/blocks/746aa3f4-726d-490a-a0d6-c595ef523c6b
+Accept: application/json
+Content-Type: application/json
+
+Response: HTTP 200
+
+{
+    "startDate": "2025-01-22",
+    "endDate": "2025-01-30",
+    "reason": "House Unavailable"
+}
+
 ```
