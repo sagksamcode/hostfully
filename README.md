@@ -101,7 +101,7 @@ Response: HTTP 200
 
 ```
 
-GET http://localhost:8080/bookings/89da3738-ceb4-487e-990c-8af1ba802d39
+DELETE http://localhost:8080/bookings/89da3738-ceb4-487e-990c-8af1ba802d39
 Accept: application/json
 Content-Type: application/json
 
