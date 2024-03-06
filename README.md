@@ -1,12 +1,12 @@
 # Booking Hostfully API
 
-This is an REST API responsible for...
+This REST API manages bookings for properties. It allows users to create, retrieve, update, and delete bookings. Each booking includes the start and end dates, guest information, and the booking status. Additionally, the API performs validation to ensure that bookings do not overlap with existing bookings or blocks when the property is unavailable.
 It uses an in-memory database (H2) to store data.
 A booking is when a guest selects a start and end date and submits a reservation on a
 property.
 A block is when the property owner or manager selects a range of days during which no
 guest can make a booking (e.g. the owner wants to use the property for themselves, or the
-property manager needs to schedule the repainting of a few rooms).
+the property manager needs to schedule the repainting of a few rooms).
 
 # Technologies 
 
@@ -201,7 +201,5 @@ Accept: application/json
 Content-Type: application/json
 
 Response: HTTP 204 
-
-```
 
 ```
