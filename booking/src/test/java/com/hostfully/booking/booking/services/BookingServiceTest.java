@@ -135,6 +135,8 @@ public class BookingServiceTest {
 
   @Test
   void deleteBooking() {
+    Booking booking = BookingFixture.createBooking();
+    when(bookingRepository.findById(anyString())).thenReturn(Optional.of(booking));
     assertDoesNotThrow(
         () -> {
           bookingService.deleteBooking("123");

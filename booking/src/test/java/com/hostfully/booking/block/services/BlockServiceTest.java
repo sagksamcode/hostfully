@@ -71,11 +71,13 @@ public class BlockServiceTest {
 
   @Test
   void deleteBlock() {
+    Block block = BlockFixture.createBlock();
+    when(blockRepository.findById(anyString())).thenReturn(Optional.of(block));
     assertDoesNotThrow(
         () -> {
           blockService.deleteBlock("123");
         });
 
-    verify(blockRepository, times(1)).deleteById(anyString());
+    verify(blockRepository, times(1)).deleteById("123");
   }
 }

@@ -1,8 +1,8 @@
 package com.hostfully.booking.block.domain.vos.request;
 
+import java.time.LocalDate;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 
 public class BlockUpdateRequest {
 
