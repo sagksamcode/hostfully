@@ -1,12 +1,14 @@
 package com.hostfully.booking.block.domain.vos.request;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 public class BlockUpdateRequest {
 
-  private LocalDate startDate;
-  private LocalDate endDate;
-  private String reason;
+  @NotNull private LocalDate startDate;
+  @NotNull private LocalDate endDate;
+  @NotEmpty private String reason;
 
   public LocalDate getStartDate() {
     return startDate;
