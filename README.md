@@ -39,6 +39,9 @@ Run the container from the image:
 ```
 $ docker run -d -p 8080:8080 booking-app
 ```
+## Postman Collection
+
+I've also added a Postman Collection with all endpoints available to be used. It is located at hostfully folder with the name Booking.postman_collection.json
 
 ## Creating Booking
 ```
