@@ -191,3 +191,17 @@ Response: HTTP 200
 }
 
 ```
+
+## Delete Block
+
+```
+
+DELETE http://localhost:8080/blocks/89da3738-ceb4-487e-990c-8af1ba802d39
+Accept: application/json
+Content-Type: application/json
+
+Response: HTTP 204 
+
+```
+
+```
