@@ -40,36 +40,58 @@ Run the container from the image:
 $ docker run -d -p 8080:8080 booking-app
 ```
 
-## Retrieve balance by account number and pin
-
+## Creating a booking
 ```
-GET http://localhost:8080/balance?accountNumber=123456789&pin=1234
+POST http://localhost:8080/bookings
 Accept: application/json
 Content-Type: application/json
 
-Response: HTTP 200
+Response: HTTP 201
 
 {
-    "accountNumber": 123456789,
-    "balance": 700,
-    "overdraft": 150
+	"startDate": "2024-01-21",
+	"endDate": "2024-01-27",
+	"guest": {
+		"firstName": "Paulo",
+		"lastName": "Dutra"
+	},
+    "propertyId": "07d0f70e-3701-4bbb-9a53-cae0ba2123ee"
 }
 
 ```
 
-## Retrieve funds by account number and pin 
+## List bookings
 
 ```
 
-GET http://localhost:8080/funds?accountNumber=123456789&pin=1234&cashRequested=100
+GET http://localhost:8080/bookings
 Accept: application/json
 Content-Type: application/json
 
-{
-    "accountNumber": 123456789,
-    "fundsRequested": 100,
-    "currentBalance": 700
-}
+[
+    {
+        "id": "413c6081-ce1e-4246-8bb0-943e2fc46493",
+        "startDate": "2024-01-28",
+        "endDate": "2024-03-20",
+        "status": "SCHEDULED",
+        "guest": {
+            "firstName": "Paulo",
+            "lastName": "Dutra"
+        },
+        "propertyId": "07d0f70e-3701-4bbb-9a53-cae0ba2123ee"
+    },
+    {
+        "id": "df6fe654-3c05-4cd8-b601-a175c58476ed",
+        "startDate": "2024-01-21",
+        "endDate": "2024-01-27",
+        "status": "SCHEDULED",
+        "guest": {
+            "firstName": "Paulo",
+            "lastName": "Dutra"
+        },
+        "propertyId": "07d0f70e-3701-4bbb-9a53-cae0ba2123ee"
+    }
+]
 
 Response: HTTP 200 
 
