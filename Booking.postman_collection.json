@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "30229f9a-76ec-4828-af11-cbc872d494d3",
+		"name": "Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.5"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"startDate\": \"2025-01-22\",\n\t\"endDate\": \"2025-01-27\",\n\t\"guest\": {\n\t\t\"firstName\": \"Paulo\",\n\t\t\"lastName\": \"Dutra\"\n\t},\n    \"propertyId\": \"07d0f70e-3701-4bbb-9a53-cae0ba2123ee\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Bookings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.5"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.5"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/bookings/a2747bc2-8cbd-4523-9f98-861c669987db",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"a2747bc2-8cbd-4523-9f98-861c669987db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Booking",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.5"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/bookings/14fa779b-cb5d-4707-8f7c-9f5b1b5d4d51/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"14fa779b-cb5d-4707-8f7c-9f5b1b5d4d51",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.5"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"startDate\": \"2024-01-21\",\n    \"endDate\": \"2024-01-27\",\n\t\"guest\": {\n\t\t\"firstName\": \"Paulo\",\n\t\t\"lastName\": \"Dutra\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings/a2747bc2-8cbd-4523-9f98-861c669987db",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"a2747bc2-8cbd-4523-9f98-861c669987db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rebook Booking",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.5"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"startDate\": \"2024-01-28\",\n    \"endDate\": \"2024-03-20\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings/14fa779b-cb5d-4707-8f7c-9f5b1b5d4d51/reschedule",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"14fa779b-cb5d-4707-8f7c-9f5b1b5d4d51",
+								"reschedule"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blocks",
+			"item": [
+				{
+					"name": "Create Block",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.5.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"startDate\": \"2024-02-21\",\n\t\"endDate\": \"2024-02-28\",\n    \"reason\": \"House Unavailable\",\n    \"propertyId\": \"07d0f70e-3701-4bbb-9a53-cae0ba2123ee\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/blocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"blocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Block",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.5.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"startDate\": \"2025-01-22\",\n\t\"endDate\": \"2025-01-30\",\n    \"reason\": \"House Unavailable\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/blocks/0e4d959b-8b45-459e-95d0-986cddcbd773",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"blocks",
+								"0e4d959b-8b45-459e-95d0-986cddcbd773"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Block",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.4.5"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/blocks/154565",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"blocks",
+								"154565"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
